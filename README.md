@@ -1,4 +1,4 @@
-We’ll write a web app called Learning Log that allows users to 
+ a web app called Learning Log that allows users to 
 log the topics they’re interested in and to make journal entries 
 as they learn about each topic. The Learning Log home page 
 should describe the site and invite users to either register or log 
