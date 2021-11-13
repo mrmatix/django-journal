@@ -3,6 +3,7 @@
 from django.contrib.auth import login
 from django.urls import path, include
 from django.contrib import admin
+from . import views
 # from django.contrib.auth.views import LoginView
 
 # from . import views
@@ -22,4 +23,6 @@ urlpatterns = [
     # Login page.
     path('login/', login, {'template_name': 'users/login.html'},
          name='login'),
+    # Logout page.
+    path('logout/', views.logout_view(), name='logout'),
 ]

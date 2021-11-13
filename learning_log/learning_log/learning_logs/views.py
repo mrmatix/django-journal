@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect, request
 from django.urls import reverse
 from .models import Topic, Entry
 from .forms import TopicForm, EntryForm
-
+from django.contrib.auth import logout
 # Create your views here.
 
 
@@ -77,3 +77,9 @@ def edit_entry(request, entry_id):
             return HttpResponseRedirect(reverse('learning_logs:topic', args=[topic.id]))
     context = {'entry': entry, 'topic': topic, 'form': form}
     return render(request, 'learning_logs/edit_entry.html', context)
+
+
+def logout_view(request):
+    # log out the user
+    logout(request)
+    return HttpResponseRedirect(reverse('learning_logs:index'))
